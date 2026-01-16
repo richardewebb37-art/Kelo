@@ -1,0 +1,42 @@
+How to Install:
+------------------
+
+Double-Click the CCX-File to install the plugin. 
+You should then see it under marketplace in your Creative Cloud Desktop Application.
+Inside Photoshop, you can start the plugin via the menu (Plugins -> Shadowify 2) or by opening the plugins panel.
+
+
+How to Use:
+-------------------
+
+## Create Shadows
+
+1) Depending on what kind of shadow you want to create, open up the respective panel (dropshadow, flat shadows etc)
+2) Select a layer
+3) Click "Create Shadow" to generate the shadow
+4) Change settings to your needs, the shadow will get updated immediately (shadow or original layer needs to be selected)
+
+----
+
+## Customize the Interface
+
+You can hide sections and settings which you don't regularly use. 
+Open up the flyout menu (menu icon at the top right of the panel) and use the "Customize ..." submenus.
+
+----
+
+## Apply Selective Blur
+
+The Selective Blur panel works a bit differently than the rest. 
+It has to calculate the blur from scratch for updates, so you'll have to undo (CTRL+Z) before each change.
+Before applying it the first time, you need to set the blur origin ("where to blur away from"). 
+It can be a selection, a specific layer or the upper layer. 
+
+----
+
+## Saving Presets
+
+Each panel provides the option to save your favorite settings as a preset.
+Expand the "Presets" section and hit the save button. A popup will open, asking you for the preset's name.
+Enter a name and hit save - the preset is now available from the presets dropdown.
+In order to update a preset, do the same process and enter the current name of the preset.

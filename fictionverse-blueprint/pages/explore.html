@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FictionVerse - Explore</title>
+    <link rel="icon" href="../kleo-assets/ico/favicon.png">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/blueprint-theme.css">
+    <link rel="stylesheet" href="../kleo-assets/css/app.css">
+    <link rel="stylesheet" href="../kleo-assets/css/fontello.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('../kleo-assets/img/patterns/gray_pattern.gif');
+            color: #333;
+        }
+        
+        .fictionverse-header {
+            background: url('../kleo-assets/img/patterns/blue_pattern.gif');
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-bottom: 4px solid #667eea;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .fictionverse-nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .fictionverse-logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .fictionverse-nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .fictionverse-nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+        
+        .fictionverse-nav-links a:hover, .fictionverse-nav-links a.active {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .fictionverse-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .fictionverse-hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .fictionverse-search {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .fictionverse-search input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        .fictionverse-search button {
+            background: #f093fb;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .fictionverse-search button:hover {
+            background: #f5576c;
+        }
+        
+        .fictionverse-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        
+        .fictionverse-section h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #667eea;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .fictionverse-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+        
+        .fictionverse-filters {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .fictionverse-filter {
+            background: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .fictionverse-filter:hover, .fictionverse-filter.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .fictionverse-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .fictionverse-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .fictionverse-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .fictionverse-card-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 64px;
+        }
+        
+        .fictionverse-card-content {
+            padding: 25px;
+        }
+        
+        .fictionverse-card-tag {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+        
+        .fictionverse-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #764ba2;
+        }
+        
+        .fictionverse-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .fictionverse-card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 15px;
+            font-size: 14px;
+            color: #999;
+        }
+        
+        .fictionverse-card-meta div {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .fictionverse-load-more {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .fictionverse-load-more button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .fictionverse-load-more button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .fictionverse-footer {
+            background: url('../kleo-assets/img/patterns/black_pattern.gif');
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .fictionverse-footer p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <header class="fictionverse-header">
+        <nav class="fictionverse-nav">
+            <a href="#" class="fictionverse-logo">
+                <i class="icon-book"></i>
+                FictionVerse
+            </a>
+            <div class="fictionverse-nav-links">
+                <a href="home-advanced.html"><i class="icon-home"></i> Home</a>
+                <a href="explore.html" class="active"><i class="icon-search"></i> Explore</a>
+                <a href="#"><i class="icon-globe"></i> Universes</a>
+                <a href="#"><i class="icon-doc"></i> Stories</a>
+                <a href="#"><i class="icon-users"></i> Community</a>
+                <a href="#"><i class="icon-user"></i> Profile</a>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="fictionverse-hero">
+        <h1>Explore Universes</h1>
+        <p style="font-size: 18px; margin-bottom: 30px;">Discover amazing fictional worlds created by our community</p>
+        <div class="fictionverse-search">
+            <input type="text" placeholder="Search universes, stories, characters...">
+            <button><i class="icon-search"></i> Search</button>
+        </div>
+    </section>
+    
+    <section class="fictionverse-section">
+        <h2>Trending Universes</h2>
+        <div class="fictionverse-filters">
+            <div class="fictionverse-filter active">All</div>
+            <div class="fictionverse-filter">Sci-Fi</div>
+            <div class="fictionverse-filter">Fantasy</div>
+            <div class="fictionverse-filter">Horror</div>
+            <div class="fictionverse-filter">Romance</div>
+            <div class="fictionverse-filter">Mystery</div>
+            <div class="fictionverse-filter">Adventure</div>
+            <div class="fictionverse-filter">Historical</div>
+        </div>
+        
+        <div class="fictionverse-grid">
+            <div class="fictionverse-card">
+                <div class="fictionverse-card-image"><i class="icon-rocket"></i></div>
+                <div class="fictionverse-card-content">
+                    <span class="fictionverse-card-tag">Sci-Fi</span>
+                    <h3>Starfield Chronicles</h3>
+                    <p>An epic space opera spanning galaxies, featuring advanced civilizations, alien races, and humanity's journey among the stars.</p>
+                    <div class="fictionverse-card-meta">
+                        <div><i class="icon-user"></i> 125 members</div>
+                        <div><i class="icon-doc"></i> 45 stories</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fictionverse-card">
+                <div class="fictionverse-card-image"><i class="icon-fire"></i></div>
+                <div class="fictionverse-card-content">
+                    <span class="fictionverse-card-tag">Fantasy</span>
+                    <h3>Realm of Aether</h3>
+                    <p>A fantasy world where magic is real, dragons soar through ancient skies, and heroes embark on legendary quests.</p>
+                    <div class="fictionverse-card-meta">
+                        <div><i class="icon-user"></i> 89 members</div>
+                        <div><i class="icon-doc"></i> 32 stories</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fictionverse-card">
+                <div class="fictionverse-card-image"><i class="icon-cloud"></i></div>
+                <div class="fictionverse-card-content">
+                    <span class="fictionverse-card-tag">Horror</span>
+                    <h3>Shadow's Edge</h3>
+                    <p>A dark, atmospheric horror universe where nightmares come to life and reality bends to ancient, malevolent forces.</p>
+                    <div class="fictionverse-card-meta">
+                        <div><i class="icon-user"></i> 67 members</div>
+                        <div><i class="icon-doc"></i> 28 stories</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fictionverse-card">
+                <div class="fictionverse-card-image"><i class="icon-heart"></i></div>
+                <div class="fictionverse-card-content">
+                    <span class="fictionverse-card-tag">Romance</span>
+                    <h3>Eternal Springs</h3>
+                    <p>A romantic universe spanning multiple lifetimes, where love transcends time and souls find each other across centuries.</p>
+                    <div class="fictionverse-card-meta">
+                        <div><i class="icon-user"></i> 156 members</div>
+                        <div><i class="icon-doc"></i> 67 stories</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fictionverse-card">
+                <div class="fictionverse-card-image"><i class="icon-lock"></i></div>
+                <div class="fictionverse-card-content">
+                    <span class="fictionverse-card-tag">Mystery</span>
+                    <h3>Velvet Shadows</h3>
+                    <p>A noir detective universe set in the 1940s, filled with mysterious cases, secret societies, and dangerous alliances.</p>
+                    <div class="fictionverse-card-meta">
+                        <div><i class="icon-user"></i> 98 members</div>
+                        <div><i class="icon-doc"></i> 41 stories</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fictionverse-card">
+                <div class="fictionverse-card-image"><i class="icon-compass"></i></div>
+                <div class="fictionverse-card-content">
+                    <span class="fictionverse-card-tag">Adventure</span>
+                    <h3>Lost Horizons</h3>
+                    <p>An adventure universe filled with unexplored lands, ancient ruins, and treasure hunters seeking legendary artifacts.</p>
+                    <div class="fictionverse-card-meta">
+                        <div><i class="icon-user"></i> 134 members</div>
+                        <div><i class="icon-doc"></i> 53 stories</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="fictionverse-load-more">
+            <button>Load More Universes</button>
+        </div>
+    </section>
+    
+    <footer class="fictionverse-footer">
+        <p>&copy; 2025 FictionVerse. All rights reserved.</p>
+        <p>Built with KLEO Theme Assets</p>
+    </footer>
+</body>
+</html>

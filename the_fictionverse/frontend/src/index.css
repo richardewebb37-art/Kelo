@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: 'IBM Plex Sans', source-code-pro, Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+    :root {
+        /* Core Cyberpunk Dark Theme - Deep Space Background */
+        --background: 0 0% 2%;
+        --foreground: 0 0% 98%;
+        
+        /* Neon Cyan Primary - Main brand color */
+        --primary: 180 100% 50%;
+        --primary-foreground: 0 0% 2%;
+        
+        /* Electric Blue Secondary */
+        --secondary: 195 100% 50%;
+        --secondary-foreground: 0 0% 98%;
+        
+        /* Neon Accent - For highlights and CTAs */
+        --accent: 180 100% 50%;
+        --accent-foreground: 0 0% 2%;
+        
+        /* Card with glassmorphism */
+        --card: 205 98% 8%;
+        --card-foreground: 0 0% 98%;
+        
+        /* Popover/Modal backgrounds */
+        --popover: 205 100% 5%;
+        --popover-foreground: 0 0% 98%;
+        
+        /* Muted elements */
+        --muted: 0 0% 15%;
+        --muted-foreground: 0 0% 60%;
+        
+        /* Borders - subtle cyan tint */
+        --border: 180 30% 20%;
+        --input: 180 30% 15%;
+        --ring: 180 100% 50%;
+        
+        /* States */
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 98%;
+        
+        /* Custom design tokens */
+        --neon-cyan: 180 100% 50%;
+        --neon-blue: 195 100% 50%;
+        --electric-blue: 210 100% 60%;
+        --deep-navy: 205 98% 8%;
+        --glass-bg: 205 50% 10%;
+        
+        /* Gradients */
+        --gradient-primary: linear-gradient(135deg, hsl(180 100% 50% / 0.2), hsl(195 100% 50% / 0.1));
+        --gradient-glow: linear-gradient(135deg, hsl(180 100% 50% / 0.3), hsl(210 100% 60% / 0.2));
+        
+        /* Shadows with neon glow */
+        --shadow-neon: 0 0 20px hsl(180 100% 50% / 0.3);
+        --shadow-neon-lg: 0 0 40px hsl(180 100% 50% / 0.4);
+        --shadow-card: 0 10px 30px hsl(0 0% 0% / 0.5);
+        
+        /* Animation timings */
+        --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        --transition-glow: 0.5s ease;
+        
+        --radius: 0.25rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html, body {
+        overflow-x: hidden;
+        min-height: 100vh;
+    }
+    body {
+        @apply bg-background text-foreground;
+        background-color: hsl(var(--background));
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@layer components {
+    /* Static background image */
+    .app-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: url('https://customer-assets.emergentagent.com/job_storyworlds/artifacts/fhmeflm7_Screenshot_20260114_122252_Chrome.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        z-index: -2;
+        pointer-events: none;
+    }
+    
+    /* Enhanced Glassmorphism card effect */
+    .glass-card {
+        background: hsl(var(--glass-bg) / 0.25);
+        backdrop-filter: blur(12px) saturate(180%);
+        -webkit-backdrop-filter: blur(12px) saturate(180%);
+        border: 1px solid hsl(var(--border) / 0.3);
+        transition: all var(--transition-smooth);
+    }
+    
+    .glass-card:hover {
+        background: hsl(var(--glass-bg) / 0.35);
+        border-color: hsl(var(--neon-cyan) / 0.5);
+        box-shadow: var(--shadow-neon);
+    }
+    
+    /* Glass section backgrounds */
+    .glass-section {
+        background: hsl(var(--background) / 0.4);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+    }
+    
+    /* Neon glow text */
+    .neon-text {
+        color: hsl(var(--neon-cyan));
+        text-shadow: 0 0 10px hsl(var(--neon-cyan) / 0.5);
+    }
+    
+    /* Button glow effect */
+    .btn-glow {
+        box-shadow: 0 0 15px hsl(var(--primary) / 0.4);
+        transition: all var(--transition-glow);
+    }
+    
+    .btn-glow:hover {
+        box-shadow: 0 0 25px hsl(var(--primary) / 0.6);
+        transform: translateY(-2px);
+    }
+    
+    /* Particle canvas - above background, below content */
+    #particle-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+    }
+    
+    /* Bottom navigation bar */
+    .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: hsl(var(--background) / 0.1);
+        backdrop-filter: blur(12px) saturate(180%);
+        -webkit-backdrop-filter: blur(12px) saturate(180%);
+        border-top: 1px solid hsl(var(--border) / 0.2);
+        padding: 0.75rem 0;
+    }
+    
+    /* Avatar dropdown menu */
+    .avatar-dropdown {
+        background: hsl(var(--popover) / 0.95);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border: 1px solid hsl(var(--border) / 0.5);
+    }
+    
+    /* Smooth fade-in animation */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .fade-in {
+        animation: fadeIn 0.6s ease-out forwards;
+    }
+    
+    /* Glow pulse animation */
+    @keyframes pulse-glow {
+        0%, 100% {
+            box-shadow: 0 0 15px hsl(var(--neon-cyan) / 0.3);
+        }
+        50% {
+            box-shadow: 0 0 30px hsl(var(--neon-cyan) / 0.6);
+        }
+    }
+    
+    .pulse-glow {
+        animation: pulse-glow 2s ease-in-out infinite;
+    }
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-style: inherit;
+        border-bottom-style: inherit;
+        border-left-color: inherit;
+        border-right-color: inherit;
+        border-top-color: inherit;
+        border-bottom-color: inherit;
+    }
+}

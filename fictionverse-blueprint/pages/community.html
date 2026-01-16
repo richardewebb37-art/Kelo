@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FictionVerse - Community</title>
+    <link rel="icon" href="../kleo-assets/ico/favicon.png">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/blueprint-theme.css">
+    <link rel="stylesheet" href="../kleo-assets/css/app.css">
+    <link rel="stylesheet" href="../kleo-assets/css/fontello.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('../kleo-assets/img/patterns/gray_pattern.gif');
+            color: #333;
+        }
+        
+        .fictionverse-header {
+            background: url('../kleo-assets/img/patterns/blue_pattern.gif');
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-bottom: 4px solid #667eea;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .fictionverse-nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .fictionverse-logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .fictionverse-nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .fictionverse-nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+        
+        .fictionverse-nav-links a:hover, .fictionverse-nav-links a.active {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .fictionverse-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 30px;
+        }
+        
+        @media (max-width: 900px) {
+            .fictionverse-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .fictionverse-main {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .fictionverse-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .fictionverse-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        
+        .fictionverse-activity-post {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        
+        .fictionverse-activity-header {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .fictionverse-activity-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .fictionverse-activity-user {
+            flex: 1;
+        }
+        
+        .fictionverse-activity-user h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #764ba2;
+        }
+        
+        .fictionverse-activity-user p {
+            font-size: 14px;
+            color: #999;
+        }
+        
+        .fictionverse-activity-content textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 100px;
+            transition: border-color 0.3s;
+        }
+        
+        .fictionverse-activity-content textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .fictionverse-activity-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+        
+        .fictionverse-activity-options {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .fictionverse-activity-option {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #666;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .fictionverse-activity-option:hover {
+            color: #667eea;
+        }
+        
+        .fictionverse-activity-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .fictionverse-activity-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .fictionverse-feed-item {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        
+        .fictionverse-feed-item h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #764ba2;
+        }
+        
+        .fictionverse-feed-item p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .fictionverse-feed-actions {
+            display: flex;
+            gap: 20px;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 15px;
+        }
+        
+        .fictionverse-feed-action {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #666;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .fictionverse-feed-action:hover {
+            color: #667eea;
+        }
+        
+        .fictionverse-feed-action.active {
+            color: #f093fb;
+        }
+        
+        .fictionverse-comments {
+            margin-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 20px;
+        }
+        
+        .fictionverse-comment {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .fictionverse-comment-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .fictionverse-comment-content {
+            flex: 1;
+        }
+        
+        .fictionverse-comment-content h5 {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #764ba2;
+        }
+        
+        .fictionverse-comment-content p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .fictionverse-sidebar h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #764ba2;
+        }
+        
+        .fictionverse-member-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .fictionverse-member {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+        
+        .fictionverse-member:hover {
+            background: #f5f5f5;
+        }
+        
+        .fictionverse-member-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .fictionverse-member-info h5 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #764ba2;
+        }
+        
+        .fictionverse-member-info p {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .fictionverse-group-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .fictionverse-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .fictionverse-group:hover {
+            transform: translateY(-3px);
+        }
+        
+        .fictionverse-group-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        
+        .fictionverse-group-info h5 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        
+        .fictionverse-group-info p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .fictionverse-footer {
+            background: url('../kleo-assets/img/patterns/black_pattern.gif');
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .fictionverse-footer p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <header class="fictionverse-header">
+        <nav class="fictionverse-nav">
+            <a href="#" class="fictionverse-logo">
+                <i class="icon-book"></i>
+                FictionVerse
+            </a>
+            <div class="fictionverse-nav-links">
+                <a href="home-advanced.html"><i class="icon-home"></i> Home</a>
+                <a href="explore.html"><i class="icon-search"></i> Explore</a>
+                <a href="#"><i class="icon-globe"></i> Universes</a>
+                <a href="#"><i class="icon-doc"></i> Stories</a>
+                <a href="community.html" class="active"><i class="icon-users"></i> Community</a>
+                <a href="#"><i class="icon-user"></i> Profile</a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="fictionverse-container">
+        <div class="fictionverse-main">
+            <div class="fictionverse-activity-post">
+                <div class="fictionverse-activity-header">
+                    <div class="fictionverse-activity-avatar">JD</div>
+                    <div class="fictionverse-activity-user">
+                        <h4>John Doe</h4>
+                        <p>What's happening in your universe?</p>
+                    </div>
+                </div>
+                <div class="fictionverse-activity-content">
+                    <textarea placeholder="Share your latest story update, universe idea, or ask for feedback..."></textarea>
+                </div>
+                <div class="fictionverse-activity-actions">
+                    <div class="fictionverse-activity-options">
+                        <div class="fictionverse-activity-option"><i class="icon-camera"></i> Photo</div>
+                        <div class="fictionverse-activity-option"><i class="icon-link"></i> Link</div>
+                        <div class="fictionverse-activity-option"><i class="icon-location"></i> Location</div>
+                    </div>
+                    <button class="fictionverse-activity-button">Post Update</button>
+                </div>
+            </div>
+            
+            <div class="fictionverse-feed-item">
+                <div class="fictionverse-activity-header">
+                    <div class="fictionverse-activity-avatar">SM</div>
+                    <div class="fictionverse-activity-user">
+                        <h4>Sarah Mitchell</h4>
+                        <p>Posted in Starfield Chronicles • 2 hours ago</p>
+                    </div>
+                </div>
+                <h3>New Chapter: The Space Station</h3>
+                <p>Just finished writing Chapter 7! The crew finally reaches the ancient space station, but they're not alone. Things are about to get intense! 🚀</p>
+                <div class="fictionverse-feed-actions">
+                    <div class="fictionverse-feed-action active"><i class="icon-heart"></i> 45</div>
+                    <div class="fictionverse-feed-action"><i class="icon-comment"></i> 12</div>
+                    <div class="fictionverse-feed-action"><i class="icon-share"></i> Share</div>
+                </div>
+                <div class="fictionverse-comments">
+                    <div class="fictionverse-comment">
+                        <div class="fictionverse-comment-avatar">MJ</div>
+                        <div class="fictionverse-comment-content">
+                            <h5>Mike Johnson</h5>
+                            <p>Can't wait to read it! The tension you're building is amazing.</p>
+                        </div>
+                    </div>
+                    <div class="fictionverse-comment">
+                        <div class="fictionverse-comment-avatar">EW</div>
+                        <div class="fictionverse-comment-content">
+                            <h5>Emily White</h5>
+                            <p>I love how you've developed the crew's relationships throughout the story.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fictionverse-feed-item">
+                <div class="fictionverse-activity-header">
+                    <div class="fictionverse-activity-avatar">RB</div>
+                    <div class="fictionverse-activity-user">
+                        <h4>Robert Brown</h4>
+                        <p>Created new universe • 5 hours ago</p>
+                    </div>
+                </div>
+                <h3>New Universe: Cyber Storm</h3>
+                <p>Just launched my new cyberpunk universe! Set in 2147, hackers and corporations battle for control over the digital realm. Looking for collaborators! 🌐</p>
+                <div class="fictionverse-feed-actions">
+                    <div class="fictionverse-feed-action active"><i class="icon-heart"></i> 78</div>
+                    <div class="fictionverse-feed-action"><i class="icon-comment"></i> 23</div>
+                    <div class="fictionverse-feed-action"><i class="icon-share"></i> Share</div>
+                </div>
+            </div>
+        </div>
+        
+        <aside class="fictionverse-sidebar">
+            <div class="fictionverse-card">
+                <h3>Active Members</h3>
+                <div class="fictionverse-member-list">
+                    <div class="fictionverse-member">
+                        <div class="fictionverse-member-avatar">SM</div>
+                        <div class="fictionverse-member-info">
+                            <h5>Sarah Mitchell</h5>
+                            <p>12 stories</p>
+                        </div>
+                    </div>
+                    <div class="fictionverse-member">
+                        <div class="fictionverse-member-avatar">MJ</div>
+                        <div class="fictionverse-member-info">
+                            <h5>Mike Johnson</h5>
+                            <p>8 stories</p>
+                        </div>
+                    </div>
+                    <div class="fictionverse-member">
+                        <div class="fictionverse-member-avatar">EW</div>
+                        <div class="fictionverse-member-info">
+                            <h5>Emily White</h5>
+                            <p>15 stories</p>
+                        </div>
+                    </div>
+                    <div class="fictionverse-member">
+                        <div class="fictionverse-member-avatar">RB</div>
+                        <div class="fictionverse-member-info">
+                            <h5>Robert Brown</h5>
+                            <p>6 stories</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fictionverse-card">
+                <h3>Popular Universes</h3>
+                <div class="fictionverse-group-list">
+                    <div class="fictionverse-group">
+                        <div class="fictionverse-group-icon"><i class="icon-rocket"></i></div>
+                        <div class="fictionverse-group-info">
+                            <h5>Starfield Chronicles</h5>
+                            <p>125 members</p>
+                        </div>
+                    </div>
+                    <div class="fictionverse-group">
+                        <div class="fictionverse-group-icon"><i class="icon-fire"></i></div>
+                        <div class="fictionverse-group-info">
+                            <h5>Realm of Aether</h5>
+                            <p>89 members</p>
+                        </div>
+                    </div>
+                    <div class="fictionverse-group">
+                        <div class="fictionverse-group-icon"><i class="icon-cloud"></i></div>
+                        <div class="fictionverse-group-info">
+                            <h5>Shadow's Edge</h5>
+                            <p>67 members</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+    
+    <footer class="fictionverse-footer">
+        <p>&copy; 2025 FictionVerse. All rights reserved.</p>
+        <p>Built with KLEO Theme Assets</p>
+    </footer>
+</body>
+</html>

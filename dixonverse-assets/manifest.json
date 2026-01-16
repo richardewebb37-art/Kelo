@@ -1,0 +1,848 @@
+{
+    "manifest_version": "1.0.23",
+    "title": "Layar - Film Maker Movie Elementor Template Kit",
+    "page_builder": "elementor",
+    "kit_version": "1.0.0",
+    "templates": [
+        {
+            "name": "Metform Contact",
+            "screenshot": "screenshots\/metform-contact.jpg",
+            "source": "templates\/metform-contact.json",
+            "preview_url": "https:\/\/rockboystudios.com\/layar\/template-kit\/metform-contact\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Global Kit Styles",
+            "screenshot": "screenshots\/global-kit-styles.jpg",
+            "source": "templates\/global.json",
+            "preview_url": "https:\/\/rockboystudios.com",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "global-styles",
+                "include_in_zip": "1",
+                "elementor_pro_required": null,
+                "additional_template_information": [
+                    "These are the global theme styles configured through the Elementor Theme Styles area."
+                ]
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Metform Newsletter",
+            "screenshot": "screenshots\/metform-newsletter.jpg",
+            "source": "templates\/metform-newsletter.json",
+            "preview_url": "https:\/\/rockboystudios.com\/layar\/template-kit\/metform-newsletter\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Footer",
+            "screenshot": "screenshots\/footer.jpg",
+            "source": "templates\/footer.json",
+            "preview_url": "https:\/\/rockboystudios.com\/layar\/template-kit\/footer\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Header",
+            "screenshot": "screenshots\/header.jpg",
+            "source": "templates\/header.json",
+            "preview_url": "https:\/\/rockboystudios.com\/layar\/template-kit\/header\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Single Post",
+            "screenshot": "screenshots\/single-post.jpg",
+            "source": "templates\/single-post.json",
+            "preview_url": "https:\/\/rockboystudios.com\/layar\/template-kit\/single-post\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Services",
+            "screenshot": "screenshots\/services.jpg",
+            "source": "templates\/services.json",
+            "preview_url": "https:\/\/rockboystudios.com\/layar\/template-kit\/services\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Home",
+            "screenshot": "screenshots\/home.jpg",
+            "source": "templates\/home.json",
+            "preview_url": "https:\/\/rockboystudios.com\/layar\/template-kit\/home\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Film Detail",
+            "screenshot": "screenshots\/film-detail.jpg",
+            "source": "templates\/film-detail.json",
+            "preview_url": "https:\/\/rockboystudios.com\/layar\/template-kit\/film-detail\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Film",
+            "screenshot": "screenshots\/film.jpg",
+            "source": "templates\/film.json",
+            "preview_url": "https:\/\/rockboystudios.com\/layar\/template-kit\/film\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Crew",
+            "screenshot": "screenshots\/crew.jpg",
+            "source": "templates\/crew.json",
+            "preview_url": "https:\/\/rockboystudios.com\/layar\/template-kit\/crew\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Contact Us",
+            "screenshot": "screenshots\/contact-us.jpg",
+            "source": "templates\/contact-us.json",
+            "preview_url": "https:\/\/rockboystudios.com\/layar\/template-kit\/contact-us\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Company",
+            "screenshot": "screenshots\/company.jpg",
+            "source": "templates\/company.json",
+            "preview_url": "https:\/\/rockboystudios.com\/layar\/template-kit\/company\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Career",
+            "screenshot": "screenshots\/career.jpg",
+            "source": "templates\/career.json",
+            "preview_url": "https:\/\/rockboystudios.com\/layar\/template-kit\/career\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Blog",
+            "screenshot": "screenshots\/blog.jpg",
+            "source": "templates\/blog.json",
+            "preview_url": "https:\/\/rockboystudios.com\/layar\/template-kit\/blog\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": null
+            },
+            "elementor_pro_required": false
+        }
+    ],
+    "required_plugins": [
+        {
+            "name": "Image Hover Effects - Elementor Addon",
+            "version": "1.4.4",
+            "file": "image-hover-effects-addon-for-elementor\/image-hover-effects-addon-for-elementor.php",
+            "author": "Blocksera"
+        },
+        {
+            "name": "Elementor",
+            "version": "3.31.3",
+            "file": "elementor\/elementor.php",
+            "author": "Elementor.com"
+        },
+        {
+            "name": "ElementsKit Lite",
+            "version": "3.7.2",
+            "file": "elementskit-lite\/elementskit-lite.php",
+            "author": "Wpmet"
+        },
+        {
+            "name": "MetForm",
+            "version": "4.0.6",
+            "file": "metform\/metform.php",
+            "author": "Wpmet"
+        },
+        {
+            "name": "Sticky Header Effects for Elementor",
+            "version": "2.1.1",
+            "file": "sticky-header-effects-for-elementor\/sticky-header-effects-for-elementor.php",
+            "author": "POSIMYTH"
+        }
+    ],
+    "images": [
+        {
+            "filename": "layar-logo.png",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/layar-logo-800x245.png",
+            "templates": [
+                {
+                    "source": "templates\/footer.json",
+                    "name": "Footer"
+                },
+                {
+                    "source": "templates\/header.json",
+                    "name": "Header"
+                }
+            ],
+            "filesize": 36663,
+            "dimensions": [
+                1675,
+                512
+            ],
+            "image_source": "self_created",
+            "image_urls": "#"
+        },
+        {
+            "filename": "empty-street-at-night-with-road-and-lanterns-conc-2024-12-07-01-46-42-utc-e1760097561932.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/empty-street-at-night-with-road-and-lanterns-conc-2024-12-07-01-46-42-utc-800x450.jpg",
+            "templates": [
+                {
+                    "source": "templates\/single-post.json",
+                    "name": "Single Post"
+                },
+                {
+                    "source": "templates\/film.json",
+                    "name": "Film"
+                },
+                {
+                    "source": "templates\/company.json",
+                    "name": "Company"
+                }
+            ],
+            "filesize": 54338,
+            "dimensions": [
+                960,
+                540
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/empty-street-at-night-with-road-and-lanterns-conce-XRLBYS2"
+        },
+        {
+            "filename": "movie-clapper-board-in-action-2025-03-13-02-51-20-utc-e1760097546806.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/movie-clapper-board-in-action-2025-03-13-02-51-20-utc-800x534.jpg",
+            "templates": [
+                {
+                    "source": "templates\/single-post.json",
+                    "name": "Single Post"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/film-detail.json",
+                    "name": "Film Detail"
+                },
+                {
+                    "source": "templates\/film.json",
+                    "name": "Film"
+                },
+                {
+                    "source": "templates\/crew.json",
+                    "name": "Crew"
+                }
+            ],
+            "filesize": 56420,
+            "dimensions": [
+                960,
+                640
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/movie-clapper-board-in-action-ZXRTZL2"
+        },
+        {
+            "filename": "open-air-cinema-party-2025-02-10-10-20-27-utc-e1760097536860.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/open-air-cinema-party-2025-02-10-10-20-27-utc-800x532.jpg",
+            "templates": [
+                {
+                    "source": "templates\/single-post.json",
+                    "name": "Single Post"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/film-detail.json",
+                    "name": "Film Detail"
+                },
+                {
+                    "source": "templates\/film.json",
+                    "name": "Film"
+                },
+                {
+                    "source": "templates\/crew.json",
+                    "name": "Crew"
+                },
+                {
+                    "source": "templates\/career.json",
+                    "name": "Career"
+                }
+            ],
+            "filesize": 114314,
+            "dimensions": [
+                960,
+                638
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/open-air-cinema-party-MUWB9US"
+        },
+        {
+            "filename": "creativity-at-work-2025-02-22-16-57-29-utc-e1760097583527.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/creativity-at-work-2025-02-22-16-57-29-utc-800x534.jpg",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                }
+            ],
+            "filesize": 83889,
+            "dimensions": [
+                960,
+                640
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/creativity-at-work-F5B7BNS"
+        },
+        {
+            "filename": "vintage-film-projector-and-film-screening-2024-10-11-01-26-26-utc-e1760097502182.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/vintage-film-projector-and-film-screening-2024-10-11-01-26-26-utc-800x402.jpg",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 34616,
+            "dimensions": [
+                960,
+                483
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/vintage-film-projector-and-film-screening-FSH2PGV"
+        },
+        {
+            "filename": "slasher-movie-scene-2024-10-16-13-36-27-utc-e1760097512208.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/slasher-movie-scene-2024-10-16-13-36-27-utc-800x600.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/film.json",
+                    "name": "Film"
+                }
+            ],
+            "filesize": 69060,
+            "dimensions": [
+                960,
+                720
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/slasher-movie-scene-HHBJD9A"
+        },
+        {
+            "filename": "digital-cinema-cameraman-2025-03-15-23-02-39-utc-e1760097577127.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/digital-cinema-cameraman-2025-03-15-23-02-39-utc-800x534.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/film-detail.json",
+                    "name": "Film Detail"
+                },
+                {
+                    "source": "templates\/film.json",
+                    "name": "Film"
+                }
+            ],
+            "filesize": 55024,
+            "dimensions": [
+                960,
+                640
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/digital-cinema-cameraman-EK26XQQ"
+        },
+        {
+            "filename": "it-s-a-movie-night-2024-10-16-11-20-28-utc-e1760097556924.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/it-s-a-movie-night-2024-10-16-11-20-28-utc-800x599.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/film-detail.json",
+                    "name": "Film Detail"
+                },
+                {
+                    "source": "templates\/film.json",
+                    "name": "Film"
+                }
+            ],
+            "filesize": 63429,
+            "dimensions": [
+                960,
+                719
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/its-a-movie-night-RHKL3HY"
+        },
+        {
+            "filename": "movie-night-2025-03-23-21-44-09-utc-e1760097541564.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/movie-night-2025-03-23-21-44-09-utc-800x450.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/company.json",
+                    "name": "Company"
+                },
+                {
+                    "source": "templates\/blog.json",
+                    "name": "Blog"
+                }
+            ],
+            "filesize": 39906,
+            "dimensions": [
+                960,
+                540
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/movie-night-XK84YGY"
+        },
+        {
+            "filename": "vintage-film-projector-and-film-screening-2024-10-11-00-34-04-utc-e1760097507183.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/vintage-film-projector-and-film-screening-2024-10-11-00-34-04-utc-800x470.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                },
+                {
+                    "source": "templates\/company.json",
+                    "name": "Company"
+                }
+            ],
+            "filesize": 37732,
+            "dimensions": [
+                960,
+                564
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/vintage-film-projector-and-film-screening-BHJ8MKS"
+        },
+        {
+            "filename": "logoipsum-logo-8.png",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/logoipsum-logo-8.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 11927,
+            "dimensions": [
+                747,
+                160
+            ],
+            "image_source": "cc0",
+            "image_urls": "logoipsum.com"
+        },
+        {
+            "filename": "logoipsum-logo-11.png",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/logoipsum-logo-11.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 8952,
+            "dimensions": [
+                635,
+                160
+            ],
+            "image_source": "cc0",
+            "image_urls": "logoipsum.com"
+        },
+        {
+            "filename": "logoipsum-logo-9.png",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/logoipsum-logo-9-800x100.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 20095,
+            "dimensions": [
+                1280,
+                160
+            ],
+            "image_source": "cc0",
+            "image_urls": "logoipsum.com"
+        },
+        {
+            "filename": "logoipsum-logo-7.png",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/logoipsum-logo-7.png",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 11512,
+            "dimensions": [
+                620,
+                160
+            ],
+            "image_source": "cc0",
+            "image_urls": "logoipsum.com"
+        },
+        {
+            "filename": "authentic-women-s-portrait-2025-03-08-18-21-35-utc-e1760097618998.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/authentic-women-s-portrait-2025-03-08-18-21-35-utc-800x534.jpg",
+            "templates": [
+                {
+                    "source": "templates\/home.json",
+                    "name": "Home"
+                }
+            ],
+            "filesize": 62649,
+            "dimensions": [
+                960,
+                640
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/authentic-womens-portrait-PLYMW2F"
+        },
+        {
+            "filename": "black-man-with-a-cunning-look-in-the-living-room-2024-11-29-22-35-23-utc-e1760097497819.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/black-man-with-a-cunning-look-in-the-living-room-2024-11-29-22-35-23-utc-e1760097497819.jpg",
+            "templates": [
+                {
+                    "source": "templates\/crew.json",
+                    "name": "Crew"
+                },
+                {
+                    "source": "templates\/company.json",
+                    "name": "Company"
+                }
+            ],
+            "filesize": 99609,
+            "dimensions": [
+                733,
+                960
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/black-man-with-a-cunning-look-in-the-living-room-BEKYLVS"
+        },
+        {
+            "filename": "businessman-looking-at-the-camera-and-smile-while-2025-01-09-17-50-11-utc-e1760097492191.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/businessman-looking-at-the-camera-and-smile-while-2025-01-09-17-50-11-utc-e1760097492191.jpg",
+            "templates": [
+                {
+                    "source": "templates\/crew.json",
+                    "name": "Crew"
+                },
+                {
+                    "source": "templates\/company.json",
+                    "name": "Company"
+                }
+            ],
+            "filesize": 100700,
+            "dimensions": [
+                640,
+                960
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/businessman-looking-at-the-camera-and-smile-while--7H26JTN"
+        },
+        {
+            "filename": "cheerful-photographer-2025-02-21-08-09-34-utc-e1760097488805.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/cheerful-photographer-2025-02-21-08-09-34-utc-e1760097488805.jpg",
+            "templates": [
+                {
+                    "source": "templates\/crew.json",
+                    "name": "Crew"
+                },
+                {
+                    "source": "templates\/company.json",
+                    "name": "Company"
+                }
+            ],
+            "filesize": 111635,
+            "dimensions": [
+                640,
+                960
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/cheerful-photographer-RRMET6H"
+        },
+        {
+            "filename": "handshaking-2025-02-21-05-22-49-utc-e1760097483557.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/handshaking-2025-02-21-05-22-49-utc-e1760097483557.jpg",
+            "templates": [
+                {
+                    "source": "templates\/crew.json",
+                    "name": "Crew"
+                },
+                {
+                    "source": "templates\/company.json",
+                    "name": "Company"
+                }
+            ],
+            "filesize": 57253,
+            "dimensions": [
+                640,
+                960
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/handshaking-5M95NY6"
+        },
+        {
+            "filename": "red-bearded-man-drinking-coffee-in-office-2025-03-18-22-08-59-utc-e1760097477595.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/red-bearded-man-drinking-coffee-in-office-2025-03-18-22-08-59-utc-e1760097477595.jpg",
+            "templates": [
+                {
+                    "source": "templates\/crew.json",
+                    "name": "Crew"
+                }
+            ],
+            "filesize": 68465,
+            "dimensions": [
+                640,
+                960
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/red-bearded-man-drinking-coffee-in-office-P37GYTE"
+        },
+        {
+            "filename": "smiling-mature-african-american-man-with-leather-b-2024-11-17-10-47-09-utc-e1760097472616.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/smiling-mature-african-american-man-with-leather-b-2024-11-17-10-47-09-utc-e1760097472616.jpg",
+            "templates": [
+                {
+                    "source": "templates\/crew.json",
+                    "name": "Crew"
+                }
+            ],
+            "filesize": 67122,
+            "dimensions": [
+                640,
+                960
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/smiling-mature-african-american-man-with-leather-b-TQYNN2P"
+        },
+        {
+            "filename": "young-african-businessman-standing-in-an-office-sm-2024-09-19-01-34-11-utc-e1760097466944.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/young-african-businessman-standing-in-an-office-sm-2024-09-19-01-34-11-utc-e1760097466944.jpg",
+            "templates": [
+                {
+                    "source": "templates\/crew.json",
+                    "name": "Crew"
+                }
+            ],
+            "filesize": 82860,
+            "dimensions": [
+                640,
+                960
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/young-african-businessman-standing-in-an-office-sm-F8XS6PR"
+        },
+        {
+            "filename": "young-cheerful-mixed-race-businessman-with-champag-2025-03-14-19-32-43-utc-e1760097459454.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/young-cheerful-mixed-race-businessman-with-champag-2025-03-14-19-32-43-utc-e1760097459454.jpg",
+            "templates": [
+                {
+                    "source": "templates\/crew.json",
+                    "name": "Crew"
+                }
+            ],
+            "filesize": 56054,
+            "dimensions": [
+                640,
+                960
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/young-cheerful-mixed-race-businessman-with-champag-UQQ7R75"
+        },
+        {
+            "filename": "director-of-photography-shooting-on-big-cinema-cam-2025-01-09-03-34-06-utc-e1760097566672.jpg",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/director-of-photography-shooting-on-big-cinema-cam-2025-01-09-03-34-06-utc-800x594.jpg",
+            "templates": [
+                {
+                    "source": "templates\/company.json",
+                    "name": "Company"
+                }
+            ],
+            "filesize": 83197,
+            "dimensions": [
+                960,
+                712
+            ],
+            "image_source": "envato_elements",
+            "image_urls": "https:\/\/elements.envato.com\/director-of-photography-shooting-on-big-cinema-cam-XSVQQ8W"
+        },
+        {
+            "filename": "logoipsum-logo-20.png",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/logoipsum-logo-20.png",
+            "templates": [
+                {
+                    "source": "templates\/company.json",
+                    "name": "Company"
+                }
+            ],
+            "filesize": 10760,
+            "dimensions": [
+                252,
+                120
+            ],
+            "image_source": "cc0",
+            "image_urls": "logoipsum.com"
+        },
+        {
+            "filename": "logoipsum-logo-21.png",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/logoipsum-logo-21.png",
+            "templates": [
+                {
+                    "source": "templates\/company.json",
+                    "name": "Company"
+                }
+            ],
+            "filesize": 9651,
+            "dimensions": [
+                147,
+                120
+            ],
+            "image_source": "cc0",
+            "image_urls": "logoipsum.com"
+        },
+        {
+            "filename": "logoipsum-logo-22.png",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/logoipsum-logo-22.png",
+            "templates": [
+                {
+                    "source": "templates\/company.json",
+                    "name": "Company"
+                }
+            ],
+            "filesize": 11182,
+            "dimensions": [
+                240,
+                120
+            ],
+            "image_source": "cc0",
+            "image_urls": "logoipsum.com"
+        },
+        {
+            "filename": "logoipsum-logo-23.png",
+            "thumbnail_url": "https:\/\/rockboystudios.com\/layar\/wp-content\/uploads\/sites\/7\/2025\/09\/logoipsum-logo-23.png",
+            "templates": [
+                {
+                    "source": "templates\/company.json",
+                    "name": "Company"
+                }
+            ],
+            "filesize": 9206,
+            "dimensions": [
+                336,
+                120
+            ],
+            "image_source": "cc0",
+            "image_urls": "logoipsum.com"
+        }
+    ]
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FictionVerse - Build Your Universe</title>
+    <link rel="icon" href="../kleo-assets/ico/favicon.png">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/blueprint-theme.css">
+    <link rel="stylesheet" href="../kleo-assets/css/app.css">
+    <link rel="stylesheet" href="../kleo-assets/css/fontello.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .fictionverse-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .fictionverse-nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .fictionverse-logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .fictionverse-nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .fictionverse-nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: opacity 0.3s;
+        }
+        
+        .fictionverse-nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        .fictionverse-hero {
+            background-image: url('../kleo-assets/img/row_bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .fictionverse-hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .fictionverse-hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .fictionverse-cta {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .fictionverse-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(240, 147, 251, 0.4);
+        }
+        
+        .fictionverse-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        
+        .fictionverse-section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #667eea;
+        }
+        
+        .fictionverse-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .fictionverse-feature {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .fictionverse-feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .fictionverse-feature h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #764ba2;
+        }
+        
+        .fictionverse-feature p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+        }
+        
+        .fictionverse-footer {
+            background: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .fictionverse-footer p {
+            margin-bottom: 10px;
+        }
+        
+        .fictionverse-footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <header class="fictionverse-header">
+        <nav class="fictionverse-nav">
+            <a href="#" class="fictionverse-logo">FictionVerse</a>
+            <div class="fictionverse-nav-links">
+                <a href="#">Home</a>
+                <a href="#">Explore</a>
+                <a href="#">Universes</a>
+                <a href="#">Stories</a>
+                <a href="#">Community</a>
+                <a href="#">Profile</a>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="fictionverse-hero">
+        <h1>Build Your Universe</h1>
+        <p>Create, share, and explore infinite fictional worlds</p>
+        <button class="fictionverse-cta">Start Creating</button>
+    </section>
+    
+    <section class="fictionverse-section">
+        <h2>Why FictionVerse?</h2>
+        <div class="fictionverse-features">
+            <div class="fictionverse-feature">
+                <h3>Create Universes</h3>
+                <p>Build detailed fictional worlds with characters, locations, timelines, and lore. Let your imagination run wild.</p>
+            </div>
+            <div class="fictionverse-feature">
+                <h3>Write Stories</h3>
+                <p>Craft compelling narratives set in your universes. Organize chapters, develop characters, and track your progress.</p>
+            </div>
+            <div class="fictionverse-feature">
+                <h3>Join Community</h3>
+                <p>Connect with fellow writers, readers, and world-builders. Share your creations, get feedback, and collaborate.</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="fictionverse-footer">
+        <p>&copy; 2025 FictionVerse. All rights reserved.</p>
+        <p>Built with KLEO Theme Assets</p>
+    </footer>
+</body>
+</html>
